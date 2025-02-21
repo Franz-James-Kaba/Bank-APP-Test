@@ -43,6 +43,13 @@ public class AddCustomerTests extends Setup {
         addCustomer.setPostalCodeField("0729354");
         addCustomer.clickSubmitButton();
     }
+    @Test
+    public void testFailAddCustomerCase5(){
+        addCustomer.setFirstNameField("Titan");
+        addCustomer.setLastNameField("Killer");
+        addCustomer.setPostalCodeField("5926437ABC0");
+        addCustomer.clickSubmitButton();
+    }
 
 
 }

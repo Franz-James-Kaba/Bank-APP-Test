@@ -1,5 +1,6 @@
-package com.lab.banktest;
+package com.lab.banktest.manager;
 
+import com.lab.banktest.customer.CustomerDashboard;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;

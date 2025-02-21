@@ -1,34 +1,30 @@
 package com.lab.managertests;
 
 import com.lab.base.Setup;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class OpenAccountTests extends Setup {
+public class DeleteCustomerTests extends Setup {
+    private static String firstName = "Harry";
+    private static String lastName = "Potter";
     @Test
-    public void testSuccessfulOpenAccount(){
-        customerManagement.goHome();
+    public void testSuccessfulDeleteCustomer(){
         homePage.clickManagerLogin();
-        managerDasboard.clickOpenAccountButton();
-        openAccount.selectCustomerDropDwn("Ron Weasly");
-        openAccount.setCurrencyDropDown("Dollar");
+        managerDasboard.clickCustomerButton();
+        customerManagement.deleteCustomer(firstName,lastName);
     }
-
     @Test
-    public void testfailOpenAccount(){
+    public void testVerifyDelete(){
+        customerManagement.goHome();
         homePage.clickManagerLogin();
         managerDasboard.clickOpenAccountButton();
         // Verify that trying to select an invalid customer name throws an exception
         assertThrows(NoSuchElementException.class, () -> {
-            openAccount.selectCustomerDropDwn("Hunter Parker");
+            openAccount.selectCustomerDropDwn(firstName+lastName);
             openAccount.setCurrencyDropDown("Dollar");
             openAccount.clickProcessButton();
-
         });
     }
-
-
 }

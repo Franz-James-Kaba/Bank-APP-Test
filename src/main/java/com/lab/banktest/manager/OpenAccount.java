@@ -1,4 +1,4 @@
-package com.lab.banktest;
+package com.lab.banktest.manager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -38,8 +38,9 @@ public class OpenAccount {
         return new Select(driver.findElement(currencyDropDown));
     }
 
-    public void clickProcessButton(){
+    public CustomerManagement clickProcessButton(){
         driver.findElement(processButton).click();
+        return new CustomerManagement(driver);
     }
 
 
