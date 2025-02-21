@@ -1,4 +1,4 @@
-package com.lab.banktest.manager;
+package com.lab.banktest.managerpages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

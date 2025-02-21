@@ -1,6 +1,6 @@
-package com.lab.banktest.manager;
+package com.lab.banktest.managerpages;
 
-import com.lab.banktest.customer.CustomerDashboard;
+import com.lab.banktest.customerpages.CustomerDashboard;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -28,7 +28,7 @@ final
 
     public CustomerDashboard clickLoginCustomerButton(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(loginManagerButton));
+        wait.until(ExpectedConditions.elementToBeClickable(loginCustomerButton));
         driver.findElement(loginCustomerButton).click();
         return new CustomerDashboard(driver);
     }

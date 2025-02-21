@@ -1,4 +1,4 @@
-package com.lab.banktest.customer;
+package com.lab.banktest.customerpages;
 
 import org.openqa.selenium.WebDriver;
 

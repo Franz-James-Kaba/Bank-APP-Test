@@ -1,10 +1,10 @@
 package com.lab.base;
 
-import com.lab.banktest.customer.CustomerAccountDashboard;
-import com.lab.banktest.customer.CustomerDashboard;
-import com.lab.banktest.customer.DepositPage;
-import com.lab.banktest.customer.WithdrawPage;
-import com.lab.banktest.manager.*;
+import com.lab.banktest.customerpages.CustomerAccountDashboard;
+import com.lab.banktest.customerpages.CustomerDashboard;
+import com.lab.banktest.customerpages.DepositPage;
+import com.lab.banktest.customerpages.WithdrawPage;
+import com.lab.banktest.managerpages.*;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.WebDriver;
